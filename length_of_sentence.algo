@@ -1,0 +1,16 @@
+FUNCTION length_of_sentence(sentence : STRING) : INTEGER
+VAR
+    count : INTEGER
+    char : CHAR
+    empty : CHAR := ' ';
+BEGIN
+//on parcour pour chaque caractere 
+    FOR EACH char IN sentence DO
+    //s si c'est different de espace on ajoute 1
+        IF (char != empty) THEN
+            count := count + 1
+        END_IF
+    END_FOR
+    // on return le total count
+    RETURN count    
+END

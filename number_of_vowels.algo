@@ -1,0 +1,15 @@
+FUNCTION number_of_vowels(sentence : STRING) : INTEGER
+VAR
+    char : CHAR
+    count : INTEGER
+BEGIN
+    // on parcoure la chaine caractere par caractere
+    FOR EACH char IN sentence DO
+    //on regarde si le caractere correspond a une voyelle 
+        IF (char == 'a' or char == 'u' or char = 'i' or char = 'e' or char ='o') THEN
+        //puis on ajoute
+            count := count + 1
+        END_IF
+    END_FOR
+    RETURN count
+END

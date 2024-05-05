@@ -1,0 +1,16 @@
+FUNCTION number_of_words(sentence : STRING) : INTEGER
+VAR
+    count : INTEGER
+BEGIN
+//on initailise count a un pour le dernier mot parce 
+//qu'il ne termine pas par un espace mais par un point
+    count := 1
+    FOR EACH char IN sentence DO
+    //si c'est egal a espace on ajoute 1 parce que chaque mot est separe par un espace
+        IF (char = empty) THEN
+            count := count + 1
+        END_IF
+    END_FOR
+    // on return le total count
+    RETURN count
+END
